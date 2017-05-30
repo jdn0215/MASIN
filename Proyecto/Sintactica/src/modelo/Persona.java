@@ -66,6 +66,7 @@ public class Persona
     info.setDetalle_CCA(CCA_DETALLE);
   }
   
+  @Override
   public String toString()
   {
     return "Persona{id=" + id + ", Name=" + Name + ", LastName=" + LastName + ", male=" + male + ", centro=" + centro + ", nivel=" + nivel + ", info=" + info + ", redaccion=" + redaccion + '}';
@@ -89,18 +90,19 @@ public class Persona
   
   public Persona(Persona P)
   {
-    id = id;
-    Name = Name;
-    LastName = LastName;
-    LastName2 = LastName2;
-    male = male;
-    centro = centro;
-    nivel = nivel;
+    id = P.id;
+    Name = P.Name;
+    LastName = P.LastName;
+    LastName2 = P.LastName2;
+    male = P.male;
+    centro = P.centro;
+    nivel = P.nivel;
     info = new Info(info.isAdecuacion(), info.getTipoAdecuacion(), P.isCCA(), info.getDetalle_CCA());
-    redaccion = redaccion;
-    edad = edad;
+    redaccion = P.redaccion;
+    edad = P.edad;
   }
   
+  @Override
   public boolean equals(Object obj)
   {
     if (obj == null) {
@@ -113,6 +115,7 @@ public class Persona
     return Objects.equals(id, id);
   }
   
+  @Override
   public int hashCode()
   {
     int hash = 5;

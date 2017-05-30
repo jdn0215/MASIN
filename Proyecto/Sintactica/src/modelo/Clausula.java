@@ -13,7 +13,7 @@ public class Clausula
     words = new ArrayList();
   }
   
-  public Clausula(Clausula C) { words = words; }
+  public Clausula(Clausula C) { words = C.words; }
   
   public void add(String w) {
     int i = 0;

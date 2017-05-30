@@ -1,8 +1,5 @@
 package Vista;
 
-import javax.swing.JLabel;
-import javax.swing.JTextArea;
-
 
 
 
@@ -26,6 +23,7 @@ public class Revisarformato
     return cont % 2 == 0;
   }
   
+  @Override
   public void run()
   {
     int aux = 0;

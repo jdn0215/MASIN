@@ -30,6 +30,7 @@ public class vistaOpciones extends javax.swing.JDialog
   
   final void set() { addWindowListener(new java.awt.event.WindowAdapter()
     {
+      @Override
       public void windowClosing(java.awt.event.WindowEvent e) {
         parent.detalle = marcadas();
         setVisible(false);
@@ -150,16 +151,14 @@ public class vistaOpciones extends javax.swing.JDialog
     
     Otro.setText("Otro");
     Otro.addMouseListener(new java.awt.event.MouseAdapter() {
+      @Override
       public void mouseClicked(java.awt.event.MouseEvent evt) {
         vistaOpciones.this.OtroMouseClicked(evt);
       }
     });
-    Otro.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
+    Otro.addActionListener((java.awt.event.ActionEvent evt) -> {
         vistaOpciones.this.OtroActionPerformed(evt);
-      }
-      
-    });
+  });
     DAP.setText("DAP (déficit atencional pasivo)");
     
     Disgrafía.setText("Disgrafía (motricidad)");
@@ -182,12 +181,9 @@ public class vistaOpciones extends javax.swing.JDialog
     jTextField1.setEnabled(false);
     
     ok.setText("VOLVER");
-    ok.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
+    ok.addActionListener((java.awt.event.ActionEvent evt) -> {
         vistaOpciones.this.okActionPerformed(evt);
-      }
-      
-    });
+  });
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
     getContentPane().setLayout(layout);
     layout.setHorizontalGroup(layout

@@ -10,10 +10,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JCheckBox;
-import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
-import javax.swing.JTextField;
 import modelo.CentroEducativo;
 import modelo.Persona;
 import modelo.Redaccion;
@@ -104,7 +101,8 @@ public class FILES
     }
   }
   
-  final void save(Workbook wb) throws FileNotFoundException, IOException { FileOutputStream fl = new FileOutputStream(new File(ruta));
+  final void save(Workbook wb) throws FileNotFoundException, IOException { 
+    FileOutputStream fl = new FileOutputStream(new File(ruta));
     wb.write(fl);
     fl.flush();
     fl.close();
@@ -246,7 +244,7 @@ public class FILES
       sheet.shiftRows(rowIndex + 1, lastRowNum, -1);
   }
   
-  void header() {
+  final void header() {
     try {
       Workbook wb = WorkbookFactory.create(new FileInputStream(new File(ruta)));
       Sheet hoja = wb.getSheetAt(0);
@@ -259,9 +257,7 @@ public class FILES
       save(wb);
     } catch (FileNotFoundException ex) {
       Logger.getLogger(FILES.class.getName()).log(Level.SEVERE, null, ex);
-    } catch (IOException ex) {
-      Logger.getLogger(FILES.class.getName()).log(Level.SEVERE, null, ex);
-    } catch (InvalidFormatException|EncryptedDocumentException ex) {
+    } catch (IOException | InvalidFormatException | EncryptedDocumentException ex) {
       Logger.getLogger(FILES.class.getName()).log(Level.SEVERE, null, ex);
     }
   }
@@ -377,9 +373,6 @@ public class FILES
     if ((!v.checkAD.isSelected()) && (v.checkNoAd.isSelected()) && 
       (p.isAdecuacion())) { return false;
     }
-    if ((v.checkAD.isSelected()) && (!v.checkNoAd.isSelected()) && 
-      (!p.isAdecuacion())) { return false;
-    }
-    return true;
+    return !((v.checkAD.isSelected()) && (!v.checkNoAd.isSelected()) && (!p.isAdecuacion()));
   }
 }

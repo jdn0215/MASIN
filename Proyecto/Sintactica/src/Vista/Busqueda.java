@@ -7,9 +7,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.GroupLayout.ParallelGroup;
-import javax.swing.GroupLayout.SequentialGroup;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
@@ -18,7 +15,6 @@ import javax.swing.JSeparator;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.LayoutStyle;
-import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.table.DefaultTableModel;
 import modelo.CentroEducativo;
 import modelo.Persona;
@@ -44,8 +40,9 @@ public class Busqueda extends javax.swing.JFrame
     titulos();
     jTable1.setAutoResizeMode(2);
     ps = files.busquedaConFiltro(this);
-    for (Persona a : ps)
-      addPersona(a);
+    ps.forEach((a) -> {
+        addPersona(a);
+      });
     getContentPane().setBackground(new Color(202, 232, 255)); }
   
   public JCheckBox checkM; public JCheckBox checkNoAd;
@@ -124,6 +121,7 @@ public class Busqueda extends javax.swing.JFrame
     setDefaultCloseOperation(3);
     
     jTable1 = new JTable() {
+      @Override
       public boolean isCellEditable(int r, int c) {
         return false;
       }
@@ -141,6 +139,7 @@ public class Busqueda extends javax.swing.JFrame
       boolean[] canEdit = { false };
       
 
+      @Override
       public boolean isCellEditable(int rowIndex, int columnIndex)
       {
         return canEdit[columnIndex];
@@ -151,6 +150,7 @@ public class Busqueda extends javax.swing.JFrame
     jTable1.setSelectionBackground(new Color(0, 51, 204));
     jTable1.getTableHeader().setReorderingAllowed(false);
     jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+      @Override
       public void mouseClicked(MouseEvent evt) {
         Busqueda.this.jTable1MouseClicked(evt);
       }
@@ -158,18 +158,12 @@ public class Busqueda extends javax.swing.JFrame
     jScrollPane1.setViewportView(jTable1);
     
     jButton1.setText("BUSCAR POR ID");
-    jButton1.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent evt) {
+    jButton1.addActionListener((ActionEvent evt) -> {
         Busqueda.this.jButton1ActionPerformed(evt);
-      }
-      
     });
     jButton2.setText("Regresar");
-    jButton2.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent evt) {
+    jButton2.addActionListener((ActionEvent evt) -> {
         Busqueda.this.jButton2ActionPerformed(evt);
-      }
-      
     });
     jLabel1.setText("ID:");
     
@@ -190,31 +184,22 @@ public class Busqueda extends javax.swing.JFrame
     checkSCA.setText("SCA");
     
     jButton3.setText("BUSCAR POR FILTRO MULTIPLE");
-    jButton3.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent evt) {
+    jButton3.addActionListener((ActionEvent evt) -> {
         Busqueda.this.jButton3ActionPerformed(evt);
-      }
-      
     });
     checkAD.setText("Tiene Adecuación");
     
     checkNoAd.setText("No tiene Adecuación");
     
     jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---", "7mo", "8vo", "9no", "10mo", "11mo", "12vo", "Otro" }));
-    jComboBox1.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent evt) {
+    jComboBox1.addActionListener((ActionEvent evt) -> {
         Busqueda.this.jComboBox1ActionPerformed(evt);
-      }
-      
     });
     jLabel3.setText("Nivel");
     
     jButton4.setText("Generar Reporte con los resultados");
-    jButton4.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent evt) {
+    jButton4.addActionListener((ActionEvent evt) -> {
         Busqueda.this.jButton4ActionPerformed(evt);
-      }
-      
     });
     GroupLayout layout = new GroupLayout(getContentPane());
     getContentPane().setLayout(layout);
@@ -349,8 +334,10 @@ public class Busqueda extends javax.swing.JFrame
       error();
       return;
     }
-    for (Persona a : ps)
-      addPersona(a); }
+    ps.forEach((a) -> {
+        addPersona(a);
+      });
+}
   
   private JSeparator jSeparator1;
   

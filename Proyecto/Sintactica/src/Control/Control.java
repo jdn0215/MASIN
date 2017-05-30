@@ -2,16 +2,10 @@ package Control;
 
 import IO.FILES;
 import Vista.Registro;
+import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JRadioButton;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import modelo.CentroEducativo;
 import modelo.Persona;
 import modelo.Redaccion;
 
@@ -133,11 +127,11 @@ public class Control
   }
   
   public void load(String id) { p = io.getById(id);
-    String t = "";
+    String t;
     boolean ok = true;
     try {
       t = IO.REDACCIONES.read(id);
-    } catch (Exception e) { ok = false;t = new String(""); }
+    } catch (IOException e) { ok = false;t = ""; }
     if ((!ok) || (p == null) || (t.length() == 0)) {
       t = "%$REDACCIÓN NO DISPONIBLE$ $ES POSIBLE QUE ALGUN ARCHIVO ESTE DAÑADO O FUERA MODIFICADO$%";
       JOptionPane.showMessageDialog(null, "REDACCIÓN NO ENCONTRADA", "Mensaje de Error", 0);

@@ -3,10 +3,7 @@ package Control;
 import Vista.Registro;
 import java.awt.Color;
 import java.util.ArrayList;
-import javax.swing.JComboBox;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import modelo.CentroEducativo;
@@ -75,10 +72,10 @@ public class constructorDeObjetos
     {
       int aux2 = Integer.parseInt(aux);
       j.setBackground(new Color(254, 254, 254));
-    } catch (Exception e) {
+    } catch (NumberFormatException e) {
       j.setBackground(new Color(255, 237, 237));
-      return false; }
-    int aux2;
+      return false; 
+    }
     return true;
   }
   

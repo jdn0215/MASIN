@@ -11,7 +11,7 @@ public class T
     clausulas = new ArrayList();
   }
   
-  public T(T t) { clausulas = clausulas; }
+  public T(T t) { clausulas = t.clausulas; }
   
 
   public void add(Clausula w) { clausulas.add(w); }

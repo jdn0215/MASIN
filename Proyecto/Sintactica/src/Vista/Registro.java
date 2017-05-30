@@ -178,54 +178,49 @@ public final class Registro extends javax.swing.JFrame
     textName.setFont(new Font("Verdana", 0, 12));
     textName.setSelectionColor(new Color(153, 153, 255));
     textName.addMouseListener(new MouseAdapter() {
+      @Override
       public void mouseClicked(MouseEvent evt) {
         Registro.this.textNameMouseClicked(evt);
       }
     });
-    textName.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent evt) {
+    textName.addActionListener((ActionEvent evt) -> {
         Registro.this.textNameActionPerformed(evt);
-      }
-    });
+  });
     jPanel5.add(textName, new AbsoluteConstraints(103, 27, 170, -1));
     
     textA2.setFont(new Font("Verdana", 0, 12));
     textA2.setSelectionColor(new Color(153, 153, 255));
     textA2.addMouseListener(new MouseAdapter() {
+      @Override
       public void mouseClicked(MouseEvent evt) {
         Registro.this.textA2MouseClicked(evt);
       }
     });
-    textA2.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent evt) {
+    textA2.addActionListener((ActionEvent evt) -> {
         Registro.this.textA2ActionPerformed(evt);
-      }
-    });
+  });
     jPanel5.add(textA2, new AbsoluteConstraints(190, 60, 80, -1));
     
     textId.setFont(new Font("Verdana", 0, 12));
     textId.setSelectionColor(new Color(153, 153, 255));
     textId.addMouseListener(new MouseAdapter() {
+      @Override
       public void mouseClicked(MouseEvent evt) {
         Registro.this.textIdMouseClicked(evt);
       }
     });
-    textId.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent evt) {
+    textId.addActionListener((ActionEvent evt) -> {
         Registro.this.textIdActionPerformed(evt);
-      }
-    });
+  });
     jPanel5.add(textId, new AbsoluteConstraints(102, 93, 151, -1));
     jPanel5.add(jSeparator1, new AbsoluteConstraints(20, 300, 240, 10));
     
     buttonGroup1.add(botonMasculino);
     botonMasculino.setSelected(true);
     botonMasculino.setText("Masculino");
-    botonMasculino.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent evt) {
+    botonMasculino.addActionListener((ActionEvent evt) -> {
         Registro.this.botonMasculinoActionPerformed(evt);
-      }
-    });
+  });
     jPanel5.add(botonMasculino, new AbsoluteConstraints(100, 270, -1, -1));
     
     buttonGroup1.add(botonFemenino);
@@ -244,48 +239,42 @@ public final class Registro extends javax.swing.JFrame
     buttonGroup2.add(botonPublico);
     botonPublico.setSelected(true);
     botonPublico.setText("Público");
-    botonPublico.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent evt) {
+    botonPublico.addActionListener((ActionEvent evt) -> {
         Registro.this.botonPublicoActionPerformed(evt);
-      }
-    });
+  });
     jPanel5.add(botonPublico, new AbsoluteConstraints(70, 370, -1, -1));
     
     textSiglas.setFont(new Font("Verdana", 0, 12));
     textSiglas.setSelectionColor(new Color(153, 153, 255));
     textSiglas.addMouseListener(new MouseAdapter() {
+      @Override
       public void mouseClicked(MouseEvent evt) {
         Registro.this.textSiglasMouseClicked(evt);
       }
     });
-    textSiglas.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent evt) {
+    textSiglas.addActionListener((ActionEvent evt) -> {
         Registro.this.textSiglasActionPerformed(evt);
-      }
-    });
+  });
     jPanel5.add(textSiglas, new AbsoluteConstraints(120, 340, 151, -1));
     
     textCentro.setFont(new Font("Verdana", 0, 12));
     textCentro.setSelectionColor(new Color(153, 153, 255));
     textCentro.addMouseListener(new MouseAdapter() {
+      @Override
       public void mouseClicked(MouseEvent evt) {
         Registro.this.textCentroMouseClicked(evt);
       }
     });
-    textCentro.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent evt) {
+    textCentro.addActionListener((ActionEvent evt) -> {
         Registro.this.textCentroActionPerformed(evt);
-      }
-    });
+  });
     jPanel5.add(textCentro, new AbsoluteConstraints(120, 310, 151, -1));
     
     buttonGroup2.add(botonPrivado);
     botonPrivado.setText("Privado");
-    botonPrivado.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent evt) {
+    botonPrivado.addActionListener((ActionEvent evt) -> {
         Registro.this.botonPrivadoActionPerformed(evt);
-      }
-    });
+  });
     jPanel5.add(botonPrivado, new AbsoluteConstraints(140, 370, -1, -1));
     
     labelId3.setText("Sexo:");
@@ -293,21 +282,17 @@ public final class Registro extends javax.swing.JFrame
     
     buttonGroup3.add(cca);
     cca.setText("CCA");
-    cca.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent evt) {
+    cca.addActionListener((ActionEvent evt) -> {
         Registro.this.ccaActionPerformed(evt);
-      }
-    });
+  });
     jPanel5.add(cca, new AbsoluteConstraints(10, 170, 50, 20));
     
     buttonGroup3.add(SCA);
     SCA.setSelected(true);
     SCA.setText("SCA");
-    SCA.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent evt) {
+    SCA.addActionListener((ActionEvent evt) -> {
         Registro.this.SCAActionPerformed(evt);
-      }
-    });
+  });
     jPanel5.add(SCA, new AbsoluteConstraints(10, 150, -1, -1));
     
     labelDetalle.setText("Detalle:");
@@ -316,30 +301,24 @@ public final class Registro extends javax.swing.JFrame
     buttonGroup4.add(noAdec);
     noAdec.setSelected(true);
     noAdec.setText("No posee Adecuación curricular ");
-    noAdec.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent evt) {
+    noAdec.addActionListener((ActionEvent evt) -> {
         Registro.this.noAdecActionPerformed(evt);
-      }
-    });
+  });
     jPanel5.add(noAdec, new AbsoluteConstraints(10, 220, -1, -1));
     
     buttonGroup4.add(siA);
     siA.setText("Posee Adecuación curricular ");
-    siA.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent evt) {
+    siA.addActionListener((ActionEvent evt) -> {
         Registro.this.siAActionPerformed(evt);
-      }
-    });
+  });
     jPanel5.add(siA, new AbsoluteConstraints(10, 240, -1, -1));
     
     tipoAdec.setEditable(true);
     tipoAdec.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Significativa", "No significativa", "De acceso" }));
     tipoAdec.setEnabled(false);
-    tipoAdec.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent evt) {
+    tipoAdec.addActionListener((ActionEvent evt) -> {
         Registro.this.tipoAdecActionPerformed(evt);
-      }
-    });
+  });
     jPanel5.add(tipoAdec, new AbsoluteConstraints(200, 240, 120, -1));
     
     jLabel3.setFont(new Font("Arial", 1, 14));
@@ -350,49 +329,43 @@ public final class Registro extends javax.swing.JFrame
     jPanel5.add(label_Id, new AbsoluteConstraints(13, 92, -1, 27));
     
     comboNivel.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "7mo", "8vo", "9no", "10mo", "11mo", "12vo", "Otro" }));
-    comboNivel.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent evt) {
+    comboNivel.addActionListener((ActionEvent evt) -> {
         Registro.this.comboNivelActionPerformed(evt);
-      }
-    });
+  });
     jPanel5.add(comboNivel, new AbsoluteConstraints(60, 120, -1, -1));
     
     textA.setFont(new Font("Verdana", 0, 12));
     textA.setSelectionColor(new Color(153, 153, 255));
     textA.addMouseListener(new MouseAdapter() {
+      @Override
       public void mouseClicked(MouseEvent evt) {
         Registro.this.textAMouseClicked(evt);
       }
     });
-    textA.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent evt) {
+    textA.addActionListener((ActionEvent evt) -> {
         Registro.this.textAActionPerformed(evt);
-      }
-    });
+  });
     jPanel5.add(textA, new AbsoluteConstraints(103, 60, 80, -1));
     
     labelId1.setText("NIVEL:");
     jPanel5.add(labelId1, new AbsoluteConstraints(20, 120, -1, 27));
     
     textoEdad.addMouseListener(new MouseAdapter() {
+      @Override
       public void mouseClicked(MouseEvent evt) {
         Registro.this.textoEdadMouseClicked(evt);
       }
     });
-    textoEdad.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent evt) {
+    textoEdad.addActionListener((ActionEvent evt) -> {
         Registro.this.textoEdadActionPerformed(evt);
-      }
-    });
+  });
     jPanel5.add(textoEdad, new AbsoluteConstraints(180, 120, 30, -1));
     
     add.setText("AGREGAR");
     add.setEnabled(false);
-    add.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent evt) {
+    add.addActionListener((ActionEvent evt) -> {
         Registro.this.addActionPerformed(evt);
-      }
-    });
+  });
     jPanel5.add(add, new AbsoluteConstraints(100, 180, 130, -1));
     
     jPanel1.setBackground(new Color(144, 210, 255));
@@ -413,6 +386,7 @@ public final class Registro extends javax.swing.JFrame
     texto.setFont(new Font("Verdana", 0, 13));
     texto.setRows(5);
     texto.addMouseListener(new MouseAdapter() {
+      @Override
       public void mouseClicked(MouseEvent evt) {
         Registro.this.textoMouseClicked(evt);
       }
@@ -421,36 +395,24 @@ public final class Registro extends javax.swing.JFrame
     
     clear.setText("LIMPIAR VENTANA");
     clear.setBorder(new SoftBevelBorder(0));
-    clear.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent evt) {
+    clear.addActionListener((ActionEvent evt) -> {
         Registro.this.clearActionPerformed(evt);
-      }
-      
-    });
+  });
     procesar.setText("PROCESAR");
     procesar.setBorder(new SoftBevelBorder(0));
-    procesar.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent evt) {
+    procesar.addActionListener((ActionEvent evt) -> {
         Registro.this.procesarActionPerformed(evt);
-      }
-      
-    });
+  });
     save.setText("GUARDAR RESULTADOS");
     save.setBorder(new SoftBevelBorder(0));
-    save.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent evt) {
+    save.addActionListener((ActionEvent evt) -> {
         Registro.this.saveActionPerformed(evt);
-      }
-      
-    });
+  });
     regresar.setText("REGRESAR");
     regresar.setBorder(new SoftBevelBorder(0));
-    regresar.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent evt) {
+    regresar.addActionListener((ActionEvent evt) -> {
         Registro.this.regresarActionPerformed(evt);
-      }
-      
-    });
+  });
     GroupLayout jPanel1Layout = new GroupLayout(jPanel1);
     jPanel1.setLayout(jPanel1Layout);
     jPanel1Layout.setHorizontalGroup(jPanel1Layout

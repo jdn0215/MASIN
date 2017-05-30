@@ -2,8 +2,6 @@ package Vista;
 
 import java.awt.event.ActionEvent;
 import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.GroupLayout.SequentialGroup;
 import javax.swing.JButton;
 
 public class dialogo extends javax.swing.JDialog

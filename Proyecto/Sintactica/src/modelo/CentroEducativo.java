@@ -15,6 +15,7 @@ public class CentroEducativo
     this.Public = Public;
   }
   
+  @Override
   public String toString()
   {
     return "CentroEducativo{name=" + name + ", siglas=" + siglas + ", Public=" + Public + '}';
@@ -26,9 +27,10 @@ public class CentroEducativo
     Public = true;
   }
   
-  public CentroEducativo(CentroEducativo C) { name = name;
-    siglas = siglas;
-    Public = Public;
+  public CentroEducativo(CentroEducativo C) { 
+    name = C.name;
+    siglas = C.siglas;
+    Public = C.Public;
   }
   
   public String getName() { return name; }

@@ -25,6 +25,7 @@ public class Info
     detalle_CCA = "-";
   }
   
+  @Override
   public String toString()
   {
     return "Info{adecuacion=" + adecuacion + ", tipoAdecuacion=" + tipoAdecuacion + ", CCA=" + CCA + ", detalle_CCA=" + detalle_CCA + '}';
@@ -36,7 +37,7 @@ public class Info
   }
   
   public static void setTipos(String[] tipos) {
-    tipos = tipos;
+    Info.tipos = tipos;
   }
   
   public boolean isAdecuacion() {

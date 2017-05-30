@@ -47,6 +47,7 @@ public class Redaccion {
     this.LPCL = LPCL;
   }
   
+  @Override
   public String toString()
   {
     return "Redaccion{redaccion=" + redaccion + ", UT=" + UT + ", CL=" + CL + ", PAL=" + PAL + ", INSUB=" + INSUB + ", LPUT=" + LPUT + ", LPCL=" + LPCL + '}';

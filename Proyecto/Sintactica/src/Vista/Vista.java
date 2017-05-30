@@ -1,11 +1,8 @@
 package Vista;
 
 import java.awt.Color;
-import java.awt.Container;
 import java.awt.event.ActionEvent;
 import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.ParallelGroup;
-import javax.swing.GroupLayout.SequentialGroup;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import org.netbeans.lib.awtextra.AbsoluteConstraints;
@@ -63,11 +60,8 @@ public class Vista extends javax.swing.JFrame
     
     jButton1.setBackground(new Color(202, 210, 255));
     jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/registro.png")));
-    jButton1.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(ActionEvent evt) {
+    jButton1.addActionListener((ActionEvent evt) -> {
         Vista.this.jButton1ActionPerformed(evt);
-      }
-      
     });
     jLabel1.setFont(new java.awt.Font("Verdana", 1, 14));
     jLabel1.setText("Nueva");
@@ -110,10 +104,8 @@ public class Vista extends javax.swing.JFrame
     
     jButton4.setBackground(new Color(202, 210, 255));
     jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/buscar.png")));
-    jButton4.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(ActionEvent evt) {
+    jButton4.addActionListener((ActionEvent evt) -> {
         Vista.this.jButton4ActionPerformed(evt);
-      }
     });
     getContentPane().add(jButton4, new AbsoluteConstraints(10, 230, 108, 86));
     
