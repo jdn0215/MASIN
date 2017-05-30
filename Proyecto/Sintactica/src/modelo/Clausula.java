@@ -16,7 +16,9 @@ public class Clausula
   public Clausula(Clausula C) { words = C.words; }
   
   public void add(String w) {
-    int i = 0;
+    String eachWord[] = w.split(" ");
+    
+    /*int i = 0;
     int j = 0;
     while (i < w.length()) {
       j = w.indexOf(' ', i);
@@ -30,6 +32,15 @@ public class Clausula
         if (aux.length() != 0)
           words.add(aux);
       }
+    }*/
+    boolean aux = true;
+    for(String a:eachWord){
+        if(a.equals("(") || a.contains("("))
+            aux = false;
+        if(a.equals(")") || a.contains(")"))
+            aux = true;
+        else if(aux && a.length() != 0)
+            this.words.add(a);
     }
   }
   

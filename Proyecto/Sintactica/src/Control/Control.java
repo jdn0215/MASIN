@@ -93,15 +93,18 @@ public class Control
     v.save.setEnabled(false);
   }
   
-  public void procesar() { R = c.construyeRedaccion(v);
+  public void procesar() { 
+    R = c.construyeRedaccion(v);
     p = c.construyePersona(v);
+   // p = new Persona();
     if ((R == null) || (p == null)) return;
     v.save.setEnabled(true);
     p.setRedaccion(R);
     resultados();
   }
   
-  public void resultados() { v.UT.setText(String.valueOf(R.getUT()));
+  public void resultados() { 
+    v.UT.setText(String.valueOf(R.getUT()));
     v.CL.setText(String.valueOf(R.getCL()));
     v.PAL.setText(String.valueOf(R.getPAL()));
     v.LPUT.setText(String.valueOf(R.getLPUT()));
