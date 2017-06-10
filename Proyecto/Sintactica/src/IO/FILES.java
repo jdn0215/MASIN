@@ -43,7 +43,8 @@ public class FILES
   }
   
   public static String[] cols = new String[20];
-  static { cols[0] = "ID";
+  static {   
+    cols[0] = "ID";
     cols[1] = "NOMBRE";
     cols[2] = "APELLIDO";
     cols[3] = "APELLIDO2";
@@ -62,7 +63,7 @@ public class FILES
     cols[16] = "PAL";
     cols[17] = "LPUT";
     cols[18] = "LPCL";
-    cols[19] = "NSUB";
+    cols[19] = "IN-SUB";
   }
   
   public FILES() { ruta = "File.xlsx";
