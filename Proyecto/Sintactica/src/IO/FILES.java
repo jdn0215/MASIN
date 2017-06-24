@@ -135,6 +135,7 @@ public class FILES
       row = (Row)it.next();
       if (row.getCell(0).getStringCellValue().equalsIgnoreCase(p.getId())) {
         encontrado = true;
+        break;
       }
     }
     
@@ -157,7 +158,7 @@ public class FILES
       case 7:  cell.setCellValue(centro.getName()); break;
       case 8:  cell.setCellValue(centro.getSiglas()); break;
       case 9:  cell.setCellValue(centro.isPublic() ? "PUBLICO" : "PRIVADO"); break;
-      case 10:  cell.setCellValue(p.isCCA() ? "CCA" : "CSA"); break;
+      case 10:  cell.setCellValue(p.isCCA() ? "CCA" : "SCA"); break;
       case 11:  cell.setCellValue(p.isCCA() ? p.getCCA_DETALLE() : "-"); break;
       case 12:  cell.setCellValue(p.isAdecuacion() ? "SI" : "NO"); break;
       case 13:  cell.setCellValue(p.isAdecuacion() ? modelo.Info.tipos[p.getTipo()] : "-"); break;
@@ -198,7 +199,7 @@ public class FILES
       case 7:  cell.setCellValue(centro.getName()); break;
       case 8:  cell.setCellValue(centro.getSiglas()); break;
       case 9:  cell.setCellValue(centro.isPublic() ? "PUBLICO" : "PRIVADO"); break;
-      case 10:  cell.setCellValue(p.isCCA() ? "CCA" : "CSA"); break;
+      case 10:  cell.setCellValue(p.isCCA() ? "CCA" : "SCA"); break;
       case 11:  cell.setCellValue(p.isCCA() ? p.getCCA_DETALLE() : "-"); break;
       case 12:  cell.setCellValue(p.isAdecuacion() ? "SI" : "NO"); break;
       case 13:  cell.setCellValue(p.isAdecuacion() ? modelo.Info.tipos[p.getTipo()] : "-"); break;

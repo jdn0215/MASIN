@@ -97,16 +97,17 @@ public class Redaccion {
     return t;
   }
   
-  float promedioT() { if (UT == 0) return 0.0F;
-    return PAL / UT;
+  float promedioT() { 
+      if (UT == 0) return 0.0F;
+      return (float)PAL / (float) UT;
   }
   
   float promedioC() { if (CL == 0) return 0.0F;
-    return PAL / CL;
+    return  (float)PAL / (float) CL;
   }
   
   float indice() { if (UT == 0) return 0.0F;
-    return CL / UT;
+    return  (float)CL / (float) UT;
   }
   
   public int getUT() {

@@ -74,6 +74,7 @@ public class REDACCIONES
         Row row = (Row)rows.next();
         if (row.getCell(0).getStringCellValue().equalsIgnoreCase(id)) {
           FILES.removeRow(hoja, row);
+          break;
         }
       }
     }
