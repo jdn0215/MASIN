@@ -1,4 +1,11 @@
-
+/**
+* Licencia de Software Libre
+* Copyright (c) 2017 Dra. Olga Arce Cascante.
+* Es condición necesaria para la utilización, distribución, 
+* ingeniería inversa o cualquier otro procedimiento informático que
+* haga necesario el acceso al ejecutable y código fuente del software MASIM
+* Ver documento LICENSE para más detalle
+*/
 
 package IO;
 
@@ -96,6 +103,7 @@ public class REDACCIONES
         Row row = (Row)rows.next();
         if (row.getCell(0).getStringCellValue().equalsIgnoreCase(id)) {
           salida = row.getCell(1).getStringCellValue();
+          break;
         }
       }
     }

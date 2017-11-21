@@ -1,8 +1,18 @@
+/**
+* Licencia de Software Libre
+* Copyright (c) 2017 Dra. Olga Arce Cascante.
+* Es condición necesaria para la utilización, distribución, 
+* ingeniería inversa o cualquier otro procedimiento informático que
+* haga necesario el acceso al ejecutable y código fuente del software MASIM
+* Ver documento LICENSE para más detalle
+*/
 package modelo;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class Redaccion {
+  DecimalFormat format = new DecimalFormat("#0.00"); 
   ArrayList<T> redaccion;
   int UT;
   int CL;
@@ -99,20 +109,28 @@ public class Redaccion {
   
   float promedioT() { 
       if (UT == 0) return 0.0F;
-      return (float)PAL / (float) UT;
+      return procesar((float)PAL / (float) UT);
   }
   
   float promedioC() { if (CL == 0) return 0.0F;
-    return  (float)PAL / (float) CL;
+    return  procesar((float)PAL / (float) CL);
   }
   
   float indice() { if (UT == 0) return 0.0F;
-    return  (float)CL / (float) UT;
+    return  procesar((float)CL / (float) UT);
+  }
+  
+  float procesar(float in){
+      String out = String.format("%.2f", in);
+      return Float.parseFloat(out);
   }
   
   public int getUT() {
     return UT;
   }
+  
+  
+  
   
   public int getCL() {
     return CL;

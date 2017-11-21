@@ -1,8 +1,17 @@
+/**
+* Licencia de Software Libre
+* Copyright (c) 2017 Dra. Olga Arce Cascante.
+* Es condición necesaria para la utilización, distribución, 
+* ingeniería inversa o cualquier otro procedimiento informático que
+* haga necesario el acceso al ejecutable y código fuente del software MASIM
+* Ver documento LICENSE para más detalle
+*/
 package Control;
 
 import IO.FILES;
 import Vista.Registro;
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -104,12 +113,13 @@ public class Control
   }
   
   public void resultados() { 
+    DecimalFormat format = new DecimalFormat("#0.00");  
     v.UT.setText(String.valueOf(R.getUT()));
     v.CL.setText(String.valueOf(R.getCL()));
     v.PAL.setText(String.valueOf(R.getPAL()));
-    v.LPUT.setText(String.valueOf(R.getLPUT()));
-    v.LPCL.setText(String.valueOf(R.getLPCL()));
-    v.INSUB.setText(String.valueOf(R.getINSUB()));
+    v.LPUT.setText(format.format(R.getLPUT()));
+    v.LPCL.setText(format.format(R.getLPCL()));
+    v.INSUB.setText(format.format(R.getINSUB()));
   }
   
   void detalles() {

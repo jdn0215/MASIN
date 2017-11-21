@@ -1,3 +1,11 @@
+/**
+* Licencia de Software Libre
+* Copyright (c) 2017 Dra. Olga Arce Cascante.
+* Es condición necesaria para la utilización, distribución, 
+* ingeniería inversa o cualquier otro procedimiento informático que
+* haga necesario el acceso al ejecutable y código fuente del software MASIM
+* Ver documento LICENSE para más detalle
+*/
 package Vista;
 
 import javax.swing.JCheckBox;
@@ -9,7 +17,7 @@ public class vistaOpciones extends javax.swing.JDialog
   public JCheckBox[] opciones;
   public JCheckBox Abulia;
   public JCheckBox Ansiedad;
-  public JCheckBox Asperguer;
+  public JCheckBox autismo;
   public JCheckBox Autoestima;
   public JCheckBox CC;
   public JCheckBox DAH;
@@ -51,7 +59,7 @@ public class vistaOpciones extends javax.swing.JDialog
   final void iniciarDescripciones() { descripciones = new String[20];
     descripciones[0] = "Abulia";
     descripciones[1] = "Ansiedad";
-    descripciones[2] = "Asperguer";
+    descripciones[2] = "Autismo";
     descripciones[3] = "Autoestima";
     descripciones[4] = "Conducta/Comportamiento";
     descripciones[5] = "DAH (déficit atencional con hiperactividad)";
@@ -74,7 +82,7 @@ public class vistaOpciones extends javax.swing.JDialog
   final void iniciarOpciones() { opciones = new JCheckBox[20];
     opciones[0] = Abulia;
     opciones[1] = Ansiedad;
-    opciones[2] = Asperguer;
+    opciones[2] = autismo;
     opciones[3] = Autoestima;
     opciones[4] = CC;
     opciones[5] = DAH;
@@ -108,7 +116,7 @@ public class vistaOpciones extends javax.swing.JDialog
   
   private void initComponents() { Abulia = new JCheckBox();
     Ansiedad = new JCheckBox();
-    Asperguer = new JCheckBox();
+    autismo = new JCheckBox();
     Autoestima = new JCheckBox();
     CC = new JCheckBox();
     DAH = new JCheckBox();
@@ -133,7 +141,7 @@ public class vistaOpciones extends javax.swing.JDialog
     
     Ansiedad.setText("Ansiedad");
     
-    Asperguer.setText("Asperguer");
+    autismo.setText("Autismo");
     
     Autoestima.setText("Autoestima");
     
@@ -199,7 +207,7 @@ public class vistaOpciones extends javax.swing.JDialog
       .addComponent(DAH)
       .addComponent(CC)
       .addComponent(Autoestima)
-      .addComponent(Asperguer)
+      .addComponent(autismo)
       .addComponent(DAP)
       .addComponent(memoria)
       .addComponent(DAI)
@@ -235,7 +243,7 @@ public class vistaOpciones extends javax.swing.JDialog
       .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
       .addComponent(Ansiedad)
       .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-      .addComponent(Asperguer)
+      .addComponent(autismo)
       .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
       .addComponent(Autoestima)
       .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
